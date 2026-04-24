@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" />
     <title>Belajar HTML</title>
 </head>
 <body>
 
     <header>
-        <h1>Belajar dasar HTML</h1>
-        <div>
-            <ul>
-                <li><a href="#About">About</a></li>
-                <li><a href="#Skill">Skill</a></li>
-                <li><a href="#Project">Project</a></li>
-                <li><a href="#Contact">Contact</a></li>
-            </ul>
+        <h1>Ahmad<span class="accent">.</span></h1>
+
+        <nav>
+                <a href="#About">About</a>
+                <a href="#Skill">Skill</a>
+                <a href="#Project">Project</a>
+                <a href="#Contact">Contact</a>
         </div>        
     </header>
     
@@ -23,23 +23,50 @@
     <main>
 
         <section id="About">
-            <h2>About Me</h2>
-            <p>Saya memiliki minat dengan bidang Graphic Design</p>
+            <div class="hero-kiri"> 
+
+                <h2>About Me</h2>
+            <p>Saya Adalah Seorang Junior Graphic Designer </p>
+            </div>
+
+            <div class="hero-kanan">
+                <img src="https://www.shutterstock.com/image-vector/3d-cartoon-character-glasses-hoodie-600nw-2540200517.jpg">
+
+            </div class="hero-kanan">
+
         </section>
 
         <section id="Skill">
+
+            <div></div>
             <h2>My Skill</h2>
-            <p>Saya dapat menggunakan software</p>
 
-            <article>
-                <h4>Adobe Photoshop</h4>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/960px-Adobe_Photoshop_CC_icon.svg.png" style="width: 50px; height: 50px;">
-            </article>
+            <ul>
+                <li>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/500px-Adobe_Photoshop_CC_icon.svg.png">
+                    <p>Adobe Photoshop</p>
+                </li>
 
-            <article>
-                <h4>Adobe Ilustrator</h4>
-                    <img src="data:image/png;base64,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" style="width: 50px; height: 50px;">
-            </article>
+                 <li>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/500px-Adobe_Photoshop_CC_icon.svg.png">
+                    <p>Adobe Photoshop</p>
+                </li>
+
+                 <li>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/500px-Adobe_Photoshop_CC_icon.svg.png">
+                    <p>Adobe Photoshop</p>
+                </li>
+
+                 <li>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/500px-Adobe_Photoshop_CC_icon.svg.png">
+                    <p>Adobe Photoshop</p>
+                </li>
+
+                 <li>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/500px-Adobe_Photoshop_CC_icon.svg.png">
+                    <p>Adobe Photoshop</p>
+                </li>
+            </ul>
             
         </section>
 
